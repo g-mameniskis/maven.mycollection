@@ -3,15 +3,16 @@ package com.github.curriculeon;
 import java.util.Arrays;
 import java.util.Iterator;
 
-public class MyArrayList<SomeType> implements MyCollectionInterface<SomeType>{
-    private SomeType[] array;
+public class MyArrayList<SomeType> implements MyCollectionInterface<SomeType>{ // 1). this is the class declaration
+    private SomeType[] array; // 2). this is the local variable. This declares a variable can exist
 
-    public MyArrayList() {
-        this.array = (SomeType[]) new Object[0];
+    public MyArrayList() { // 3). this is my constructor. I'm creating an instance of my class
+        this.array = (SomeType[]) new Object[0]; // 4). Here I am initializing my instance by saying "hey, I
+        // want an object that will be an array of SomeType value with a size of 0"
     }
 
-    public MyArrayList(SomeType[] valuesToBePopulatedWith) {
-        this.array = valuesToBePopulatedWith;
+    public MyArrayList(SomeType[] valuesToBePopulatedWith) { // 5). I have a second constructor. This one with a parameter
+        this.array = valuesToBePopulatedWith; // 6). Here I assign my new array the value of my parameter
     }
 
     public static void main(String[] args) {
