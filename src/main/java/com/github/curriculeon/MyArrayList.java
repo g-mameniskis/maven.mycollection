@@ -3,8 +3,11 @@ package com.github.curriculeon;
 import java.util.Arrays;
 import java.util.Iterator;
 
-public class MyArrayList<SomeType> implements MyCollectionInterface<SomeType>{ // 1). this is the class declaration
-    private SomeType[] array; // 2). this is the local variable. This declares a variable can exist
+public class MyArrayList<SomeType> implements MyCollectionInterface<SomeType>{ // 1). this is the class declaration,
+    // I'm saying, "hey, look, I want to create a class to store related methods"
+    // for this class, I added a parameter which is a generic type
+
+    private SomeType[] array; // 2). this is the local variable. This declares that a variable can exist
 
     public MyArrayList() { // 3). this is my constructor. I'm creating an instance of my class
         this.array = (SomeType[]) new Object[0]; // 4). Here I am initializing my instance by saying "hey, I
